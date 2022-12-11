@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="CSS.css">
+    <link rel="stylesheet" href="keypadcss2.css">
+    <link rel="stylesheet" href="menu-backup.css">
+    <link rel="stylesheet" href="menu-psi.css">
+    <link rel="stylesheet" href="typing.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital@1&display=swap"
+        rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/7b6a3052ac99368df5c80f3fd161fe32?family=Square721+BT" rel="stylesheet"
+        type="text/css" />
+
+    <!--JAVASCRIPT-->
+
+    <!-- !!!!CONFLICT IS BETWEEN menus.js and game4 / psi-powers!!! -->
+    <!-- !!!!140722 - conflict seems to be gone however pushPsiPowers still not working -->
+    <!-- !!!!140722 the order in which you place the scripts is the order in which they will be looked at!!!! -->
+    <!-- I think maybe i need to cut psi-powers.js down further to literally its bear essentials in order to get this to work -->
+    <!-- menu and psi powers HAVE to come first for some reason -->
+    <script defer src="const.js"></script> 
+    <script defer src="game6.js"></script> 
+    
+    <script defer src="psi-powers.js"></script> 
+    <script defer src="items.js"></script> 
+    <script defer src="menus.js"></script>  
+    <script defer src="psi-menu.js"></script>
+    <script defer src="imagefade.js"></script>
+    <script defer src="calc.js"></script>
+    <!-- <script  defer src="game4.js"></script> -->
+    
+    
+   
+    <!-- <script defer src="menu3.js"></script> -->
+
+
+    <!-- 
+ 
+    
+    
+    <script defer src="texttype.js"></script> -->
+
+
+
+
+
+
+    <title>Text Adventure</title>
+</head>
+
+
+<body>
+
+    <body onload="startGame();"></body>
+
+    <header>
+    </header>
+
+        <div id="itemtext" class="node">A test item!</div>
+        <div id="itemtext2" class="tooltip">A gun!</div>
+        <div id="itemtext3" class="tooltip">A uniform!</div>
+
+    </div>
+
+
+    
+
+    
+
+    <div id="screenfade" class="screenfade"> </div>
+
+
+   
+    <!-- <div class="intro"> 
+        <h1>Hello I make</h1>
+        <h1 class="typing"></h1>
+    </div> -->
+
+
+
+    <div id="screencontainer" class="screencontainer">
+        <img id="screen" img src="SCREEN.PNG" />
+    </div>
+
+
+
+    <div id="Blackbox" class="Blackbox ">
+    </div>
+
+
+    <section id="image-section" class="image-section">
+
+        <img id="room-image" />
+
+    </section>
+
+
+
+    
+
+    <section id="text-section" class="text ">
+
+        <div id="text">Text</div>
+
+
+    </section>
+
+    <div class="inventoryContainer" id="inventoryContainer"> 
+    <div class="inventory-active" id="inventory"> 
+
+        <div class="psi-links" id="psi-inventory">
+            <div id = "Page1" Class ="Page"> 
+            <div   id="psi-power" class="psi-power"></div>
+            <img  id="psipowerimage" img src="" ></img>
+            <div   id="psipowertext">Item Text</div>
+        </div>
+            <button   id= "back"><-</button>
+            <button  id= "Next">-></button>
+        </div>
+
+    </div>
+    <button class="inventoryButton" id= "inventoryButton"
+    onclick= "play();">Inventory</button>
+
+
+        <button class="psiButton" id="psiButton" 
+        
+      > Psi</button>
+       
+            
+      
+
+       
+
+        
+
+
+</div>
+
+
+    <canvas id="canvas" class ="canvas"  ></canvas>
+    <!-- <div class="canvas" id="canvas"> </div> -->
+    <!-- <script type="text/javascript" src="game6.js"></script>
+    <script type="text/javascript" src="const.js"></script> -->
+    <!-- <script type="text/javascript" src="game6.js" -->
+
+    <div class="map" id="map"> </div>
+
+
+    <section id="option-section">
+        <div class="container">
+            <div id="option-buttons" class="btn-grid">
+                <button class="btn" id="button1">Option 1</button>
+                <button class="btn" id="button2">Option 2</button>
+                <button class="btn" id="button3">Option 3</button>
+                <button class="btn" id="button4">Option 4</button>
+
+            </div>
+
+            <br>
+
+
+<!-- 
+            <div id="Music">
+                <h3>Play background music for best experience</h3>
+
+                <br>
+                <audio controls>
+
+
+
+                    <source src="THING.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio> -->
+
+
+
+                <div id="keypad" class="keypad">
+                    <div id="keypadwrapper" class="keypadwrapper">
+                        <img id="keypadImage" class="keypadImage" img src="Swipe access 7.png" />
+
+
+
+                        <div class="keypadinputLabel" colspan="4" id="keypadinputLabel">0</div>
+
+
+                        <div class="container">
+                            <div id="keypadoption-buttons" class="keypadoption-buttons">
+
+
+
+
+                                <table>
+
+                                    <tr>
+                                        <td><button class="keypadbtn" id=keypadbutton7
+                                                onclick="pushBtn(this); play();">7</button></td>
+                                        <td><button class="keypadbtn" id=keypadbutton8
+                                                onclick="pushBtn(this); play();">8</button></td>
+                                        <td><button class="keypadbtn" id=keypadbutton9
+                                                onclick="pushBtn(this); play();">9</button></td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><button class="keypadbtn" id=keypadbutton4
+                                                onclick="pushBtn(this); play();">4</button></td>
+                                        <td><button class="keypadbtn" id=keypadbutton5
+                                                onclick="pushBtn(this); play();">5</button></td>
+                                        <td><button class="keypadbtn" id=keypadbutton6
+                                                onclick="pushBtn(this); play();">6</button></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><button class="keypadbtn" id=keypadbutton1
+                                                onclick="pushBtn(this); play();">1</button></td>
+                                        <td><button class="keypadbtn" id=keypadbutton2
+                                                onclick="pushBtn(this); play();">2</button></td>
+                                        <td><button class="keypadbtn" id=keypadbutton3
+                                                onclick="pushBtn(this); play();">3</button></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><button class="keypadbtn" id=star
+                                                onclick="pushBtn(this); play();">*</button></td>
+                                        <td><button class="keypadbtn" id=button0
+                                                onclick="pushBtn(this); play();">0</button></td>
+                                        <td><button class="keypadbtn" id=hash
+                                                onclick="pushBtn(this); play();">Clear</button></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+
+                            <div class="LEDGREEN" id="LEDGREEN"></div>
+
+
+
+
+                            <div class="LEDRED" id="LEDRED"></div>
+
+
+                        </div id="keypadwrapper" class="keypadwrapper">
+                    </div>
+
+
+                    <audio id="audio" src="beep-07.mp3"></audio>
+
+
+                    <!-- <div class="border-Bottom" id="border-Bottom"></div> -->
+
+                   
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+                        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+                        crossorigin="anonymous"></script>
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+                        integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+                        crossorigin="anonymous"></script>
+                    <script src="snow.js"></script>
+
+
+
+                    <!-- <script defer src="menus.js"></script>  -->
+</body>
+
+<!-- <script defer src="menus.js"></script>  -->
+
+
+
+</html>

@@ -1,0 +1,191 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+nav {
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: flex-end;
+    min-height: 5vh;
+    background-color: #d4bc87;
+    z-index: 200;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* .border-Bottom {
+    display: flex;
+    /* justify-content: space-evenly; */
+/* align-items: flex-end;
+    min-height: 30vh;
+    background-color: #d4bc87; */
+
+/* left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden; */
+/* }*/
+
+.space {
+    width: 100px;
+}
+
+.logo {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    display: flex;
+    left: 50%;
+    z-index: 300;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    top: 1px;
+    display: block;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.burger div {
+    overflow: hidden;
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    margin: 7px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* @media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+} */
+
+.inventoryContainer {
+    position: fixed;
+    background-color: red;
+    right: 2vw;
+    height: 52vh;
+    top: 6vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.inventory {
+    display: none;
+}
+
+.inventory-active {
+    position: fixed;
+    right: 2.5vw;
+    height: 44vh;
+    top: 7vh;
+    width: 24vw;
+    background-color: darkslategray;
+    /* background-image: url("paper.jpg"); */
+    display: block;
+    flex-direction: row;
+    border-radius: 20px;
+    z-index: 11;
+}
+
+.inventoryButton {
+    position: absolute;
+
+    color: rgb(47, 207, 159);
+    border-color: rgb(47, 207, 159);
+    background-color: rgb(24, 78, 48);
+    right: 16vw;
+    height: 6vh;
+    width: 8vw;
+    top: 45.5vh;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#psiButton {
+    position: absolute;
+
+    color: rgb(47, 207, 159);
+    border-color: rgb(47, 207, 159);
+    background-color: rgb(24, 78, 48);
+    right: 7vw;
+    height: 6vh;
+    width: 8vw;
+    top: 45.5vh;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#canvas {
+    /* display: flex; */
+    position: fixed;
+    right: 2vw;
+    top: 59vh;
+    margin: 0 auto;
+    background: #eee;
+    border: solid 6px #444;
+    /* background-color: brown; */
+    /* height: 7vh;
+    width: 25vw; */
+    border-radius: 20px;
+}
+
+li {
+    font-size: 40px;
+    color: red;
+}
+
+/* .burger {
+    display: block;
+    cursor: pointer;
+}
+
+.nav-active {
+    transform: translate(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+} */

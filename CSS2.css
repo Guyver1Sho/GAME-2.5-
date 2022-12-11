@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+    margin: auto;
+    padding: 0;
+    overflow: auto;
+    position: relative;
+    font-family: "Gotham", "Franklin Gothic Medium", "Arial Narrow", Arial,
+        sans-serif;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.wrapper div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*ELEMENTS*/
+
+#gap {
+    flex: 1 0 400px;
+}
+
+body .Blackbox {
+    background-color: black;
+    z-index: 10;
+    opacity: 0;
+    top: 8.4%;
+    height: 35.5vh;
+    width: 34.7vw;
+    position: fixed;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#screenfade {
+    background-color: black;
+    background-size: cover;
+    display: none;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+#screen {
+    height: 41.5vh;
+    width: 38.5vw;
+    display: inline-block;
+}
+
+#screencontainer {
+    margin-top: 1px;
+    top: 6%;
+    z-index: -1;
+    position: fixed;
+    display: flex;
+}
+
+#room-image {
+    height: 35.5vh;
+    width: 34.6vw;
+
+    object-fit: cover;
+}
+
+#image-section {
+    display: flex;
+    position: fixed;
+
+    z-index: 3;
+    top: 8.5%;
+}
+
+#text-section {
+    background-image: url(./textbox.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+
+    width: 30vw;
+    height: 14vh;
+
+    font-style: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    overflow: hidden;
+    margin-top: 12vh;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+#Music {
+    position: relative;
+    margin-top: 48%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#option-section {
+    top: 63vh;
+    margin-top: 10px;
+    background: #d4bc87;
+
+    align-items: center;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 20px;
+    height: 35vh;
+    width: 25vw;
+
+    z-index: 3;
+    cursor: pointer;
+    position: fixed;
+    overflow: hidden;
+}
+
+.btn-grid {
+    width: 24vw;
+    height: 25vh;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-top: 0.3%;
+    padding: 5px;
+
+    position: fixed;
+    cursor: pointer;
+}
+
+.btn {
+    background-image: url(./BLANKKEY.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: black;
+    font-size: 20px;
+    outline: none;
+    height: 11vh;
+    width: 11vw;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#button3 {
+    background-image: url(./BLANKKEYDARK.png);
+}
+
+.btn:active {
+    border-color: black;
+    background-image: url(./BLANKKEYDARK.png);
+}
+
+#inventory {
+    display: flex;
+    overflow: hidden;
+}
+
+#inventory img {
+    height: 400px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.Div1 {
+    display: block;
+    height: 400px;
+    width: 500x;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.Div1-on {
+    display: block;
+    height: 400px;
+    width: 500x;
+    border-style: solid;
+    color: cadetblue;
+    cursor: pointer;
+}
+
+#Div2 {
+    display: block;
+    overflow: hidden;
+    height: 400px;
+    width: 500px;
+    cursor: pointer;
+}
+
+#Div2-on {
+    display: block;
+    height: 401px;
+    width: 501px;
+    background-color: cadetblue;
+    cursor: pointer;
+}
+
+#Div3 {
+    display: block;
+    overflow: hidden;
+    height: 400px;
+    width: 500px;
+    cursor: pointer;
+}
+
+#Div3-on {
+    display: block;
+    height: 401px;
+    width: 501px;
+    background-color: cadetblue;
+    cursor: pointer;
+}
+
+.itemtext {
+    position: absolute;
+    visibility: hidden;
+    font-size: 80px;
+    top: 50px;
+    color: red;
+    z-index: 200;
+}
+
+.itemtext-on {
+    position: absolute;
+    visibility: initial;
+    color: green;
+    font-size: 80px;
+    top: 50px;
+    z-index: 200;
+}
+
+#elmo:hover {
+    opacity: 0.8;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url(./BACKGROUND.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: -2;
+    overflow: hidden;
+}
+
+#snow-js {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    overflow: hidden;
+}
