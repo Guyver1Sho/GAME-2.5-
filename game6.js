@@ -31,7 +31,7 @@ const roomImages = [
     },
 ];
 
-///ITEM IMAGE ARRAY///
+///ITEM IMAGE ARRAY//////
 
 //FOR EACH ITEM I NEED TO CREATE AN IMAGE + TEXT ENTRY FOR IT TO FILL.ETC///
 
